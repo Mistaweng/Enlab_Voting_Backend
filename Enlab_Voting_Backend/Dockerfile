@@ -3,11 +3,10 @@
 FROM mcr.microsoft.com/dotnet/aspnet:7.0 AS base
 WORKDIR /app
 EXPOSE 80
-EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build
 WORKDIR /src
-COPY ["Enlab_Voting_Backend/Enlab_Voting_Backend.csproj", "Enlab_Voting_Backend/"]
+COPY ["Enlab_Voting_Backend.csproj", "./"]
 RUN dotnet restore "Enlab_Voting_Backend/Enlab_Voting_Backend.csproj"
 COPY . .
 WORKDIR "/src/Enlab_Voting_Backend"
