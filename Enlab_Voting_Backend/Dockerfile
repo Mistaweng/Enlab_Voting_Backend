@@ -5,7 +5,7 @@ WORKDIR /app
 EXPOSE 80
 
 FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build
-WORKDIR /src
+WORKDIR /src/Enlab_Voting_Backend
 COPY ["Enlab_Voting_Backend.csproj", "./Enlab_Voting_Backend"]
 RUN dotnet restore "Enlab_Voting_Backend/Enlab_Voting_Backend.csproj"
 COPY . .
@@ -20,6 +20,4 @@ WORKDIR /app
 COPY --from=publish /app/publish .
 ENTRYPOINT ["dotnet", "Enlab_Voting_Backend.dll"]
 
-WORKDIR /src/Enlab_Voting_Backend
-COPY . .
-RUN dotnet restore "Enlab_Voting_Backend.csproj"
+
