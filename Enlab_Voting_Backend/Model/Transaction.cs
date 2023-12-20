@@ -4,7 +4,7 @@
 	{
 		public DateTime Date { get; set; }
 		public string Description { get; set; }
-		public decimal Amount { get; set; }
+		public decimal PaymentAmount { get; set; }
 		public bool IsSuccessful { get; set; }
 		public string Reference { get; set; }
 		public string IpAddress { get; set; }
