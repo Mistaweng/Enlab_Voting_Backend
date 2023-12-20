@@ -6,6 +6,7 @@
 		public string ContestantId { get; set; }
 		public string AppUserId { get; set; }
 		public AppUser AppUser { get; set; }
+        public bool IsSelected { get; set; }
 
-	}
+    }
 }

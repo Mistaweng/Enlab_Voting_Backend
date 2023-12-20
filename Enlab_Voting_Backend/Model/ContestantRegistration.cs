@@ -7,6 +7,8 @@
         public string ImageUrl { get; set; }
         public string Description { get; set; }
         public int Fees { get; set; }
+        public bool HasPaid { get; set; }
+        public decimal PaymentAmount { get; set; }
 
 
     }
